@@ -14,7 +14,7 @@ public class LojaFerramentasGUIV2 extends JFrame {
         setLocation(0, 0);
         setResizable(true);
         getContentPane().setBackground(Color.white);
-        linha1 = new JLabel("Minha Loja de Ferramentas!", JLabel.CENTER);
+        linha1 = new JLabel("Minha Loja de Ferramentas", JLabel.CENTER);
         linha1.setForeground(Color.red);
         linha1.setFont(new Font("Serif", Font.BOLD, 24));
         linha2 = new JLabel(resizedIcon, JLabel.CENTER);

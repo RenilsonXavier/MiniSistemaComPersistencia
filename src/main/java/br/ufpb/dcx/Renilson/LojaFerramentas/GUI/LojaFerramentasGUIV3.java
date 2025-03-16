@@ -19,7 +19,7 @@ public class LojaFerramentasGUIV3 extends JFrame{
     SistemaLojaFerramentasPOO sistemaLojaFerramentas = new SistemaLojaFerramentasPOO();
 
     public LojaFerramentasGUIV3(){
-        setTitle("Loja de Ferramentas");
+        setTitle("Loja de Ferramentas ");
         setSize(800,600); //tamanho da janela
         setLocation(150, 150);
         setResizable(false);

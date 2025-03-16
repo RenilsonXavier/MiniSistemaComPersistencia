@@ -7,9 +7,9 @@ import java.io.IOException;
      */
 public interface SistemaLojaFerramentas {
 
-        void cadastraFerramenta(String codigoFerramenta, String descricao, int quantidade) throws FerramentaJaExisteException;
+        void cadastraFerramenta(String nome, String codigo, int quantidade) throws FerramentaJaExisteException;
         Ferramenta pesquisaFerramenta(String codigo) throws FerramentaInexistenteException;
-        void removeFerramenta(String nome) throws FerramentaInexistenteException;
+        void removeFerramenta(String codigo) throws FerramentaInexistenteException;
         void recuperaFerramentas() throws IOException, FerramentaJaExisteException;
         void salvarFerramentas() throws IOException;
 }

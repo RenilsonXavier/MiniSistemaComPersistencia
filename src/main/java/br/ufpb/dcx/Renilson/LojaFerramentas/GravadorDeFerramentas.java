@@ -8,7 +8,7 @@ public class GravadorDeFerramentas {
 
     private String arquivoFerramentas;
 
-    public GravadorDeFerramentas(){
+    public GravadorDeFerramentas() {
         this.arquivoFerramentas = "ferramentas.dat";
     }
 

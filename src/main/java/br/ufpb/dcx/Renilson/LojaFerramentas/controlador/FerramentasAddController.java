@@ -1,7 +1,5 @@
 package br.ufpb.dcx.Renilson.LojaFerramentas.controlador;
 
-
-import br.ufpb.dcx.Renilson.LojaFerramentas.Ferramenta;
 import br.ufpb.dcx.Renilson.LojaFerramentas.FerramentaJaExisteException;
 import br.ufpb.dcx.Renilson.LojaFerramentas.SistemaLojaFerramentasPOO;
 
@@ -29,12 +27,12 @@ public class FerramentasAddController implements ActionListener{
             try {
                 sistema.cadastraFerramenta(nome, codigo, quantidade);
                 JOptionPane.showMessageDialog(janelaPrincipal,
-                        "Ferramenta cadastrada");
+                        "Ferramenta cadastrada!");
 
             } catch(FerramentaJaExisteException ex)  {
                 JOptionPane.showMessageDialog(janelaPrincipal,
                         "Ferramenta não foi cadastrada. " +
-                                "Verifique se já não existia");
+                                "Verifique se já não existia!");
             }
         }
 }

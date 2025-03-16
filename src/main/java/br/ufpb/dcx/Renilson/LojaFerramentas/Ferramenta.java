@@ -35,9 +35,9 @@ public class Ferramenta implements Serializable {
 
     @Override
     public String toString() {
-        return "br.ufpb.dcx.Renilson.LojaFerramentas.GUI.Ferramenta{" +
-                "codigo='" + codigo + '\'' +
-                ", descricao='" + nome + '\'' +
+        return "Ferramenta{" +
+                "nome='" + nome + '\'' +
+                ", codigo='" + codigo + '\'' +
                 ", quantidade=" + quantidade +
                 '}';
     }
@@ -52,7 +52,7 @@ public class Ferramenta implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(codigo, nome, quantidade);
+        return Objects.hash( nome, codigo, quantidade);
     }
 
 }

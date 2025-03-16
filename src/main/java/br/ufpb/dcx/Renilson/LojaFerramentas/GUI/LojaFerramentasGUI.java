@@ -8,7 +8,7 @@ import java.awt.event.WindowListener;
 
 public class LojaFerramentasGUI extends JFrame {
     public LojaFerramentasGUI(){
-        setTitle("Loja de Ferramentas de Renilson");
+        setTitle("Loja de Ferramentas de Renilson ");
         setSize(600,600);
         setLocation(0,0);
         // localização da janela na tela

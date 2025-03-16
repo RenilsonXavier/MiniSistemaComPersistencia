@@ -14,12 +14,12 @@ public class SistemaLojaFerramentasPOO implements SistemaLojaFerramentas{
         this.gravadorDeFerramentas = new GravadorDeFerramentas();
     }
     @Override
-    public void cadastraFerramenta(String codigoFerramenta, String descricao, int quantidade) throws FerramentaJaExisteException {
-        if (this.ferramentaMap.containsKey(codigoFerramenta)) {
-            throw new FerramentaJaExisteException("Ferramenta já cadastrada: " + codigoFerramenta);
+    public void cadastraFerramenta(String nome, String codigo, int quantidade) throws FerramentaJaExisteException {
+        if (this.ferramentaMap.containsKey(codigo)) {
+            throw new FerramentaJaExisteException("Ferramenta já cadastrada: " + codigo);
         } else {
-            Ferramenta f = new Ferramenta(codigoFerramenta, descricao, quantidade);
-            this.ferramentaMap.put(codigoFerramenta, f);
+            Ferramenta f = new Ferramenta(nome, codigo, quantidade);
+            this.ferramentaMap.put(codigo, f);
         }
     }
 
@@ -28,15 +28,15 @@ public class SistemaLojaFerramentasPOO implements SistemaLojaFerramentas{
         if (this.ferramentaMap.containsKey(codigo)){
             return this.ferramentaMap.get(codigo);
         } else {
-            throw new FerramentaInexistenteException("Não existe ferramenta com esté código:"+ codigo);
+            throw new FerramentaInexistenteException("Não existe ferramenta com esté código: " + codigo);
         }
     }
 
-    public void removeFerramenta(String nome) throws FerramentaInexistenteException {
-        if (this.ferramentaMap.containsKey(nome)){
-            this.ferramentaMap.remove(nome);
+    public void removeFerramenta(String codigo) throws FerramentaInexistenteException {
+        if (this.ferramentaMap.containsKey(codigo)){
+            this.ferramentaMap.remove(codigo);
         } else {
-            throw new FerramentaInexistenteException("Não existe contato com o nome "+nome);
+            throw new FerramentaInexistenteException("Não existe contato com o codígo: " + codigo);
         }
     }
 

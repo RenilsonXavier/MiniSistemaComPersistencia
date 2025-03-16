@@ -29,7 +29,7 @@ public class FerramentasSearchController implements ActionListener{
         try {
             Ferramenta ferramenta = sistema.pesquisaFerramenta(codigo);
                 JOptionPane.showMessageDialog(janelaPrincipal,
-                        "Ferramenta encontrados:  \n  " + ferramenta.toString());
+                        "Ferramenta encontrada:  \n  " + ferramenta.toString());
         } catch(FerramentaInexistenteException ex){
             JOptionPane.showMessageDialog(janelaPrincipal, ex.getMessage());
         }

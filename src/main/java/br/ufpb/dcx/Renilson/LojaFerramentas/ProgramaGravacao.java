@@ -8,8 +8,8 @@ import java.util.List;
 public class ProgramaGravacao {
     public static void main(String [] args){
 
-        Ferramenta f1 = new Ferramenta("666", "Motosserra", 12);
-        Ferramenta f2 = new Ferramenta("222", "Furadeira", 21);
+        Ferramenta f1 = new Ferramenta("Motosserra", "666" , 12);
+        Ferramenta f2 = new Ferramenta("Furadeira" , "222", 21);
 
         List<Ferramenta> ferramentas = new LinkedList<>();
         ferramentas.add(f1);
