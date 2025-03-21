@@ -14,7 +14,7 @@ public class LojaFerramentasGUIV3ComMenu extends JFrame {
     SistemaLojaFerramentasPOO sistemaLojaFerramentasPOO = new SistemaLojaFerramentasPOO();
     JMenuBar barraDeMenu = new JMenuBar();
 
-    Image image = lojaImg.getImage().getScaledInstance(300, 200, Image.SCALE_SMOOTH);
+    Image image = lojaImg.getImage().getScaledInstance(400, 200, Image.SCALE_SMOOTH);
     ImageIcon resizedIcon = new ImageIcon(image);
 
     public LojaFerramentasGUIV3ComMenu(){
@@ -22,9 +22,9 @@ public class LojaFerramentasGUIV3ComMenu extends JFrame {
         setSize(800, 600); // tamanho da janela
         setLocation(150, 150);
         setResizable(false);
-        setBackground(Color.white);
-        linha1 = new JLabel("Minha Loja de Ferramentas", JLabel.CENTER);
-        linha1.setForeground(Color.red);
+        getContentPane().setBackground(Color.lightGray);
+        linha1 = new JLabel("Minha Loja de Ferramentas Online ", JLabel.CENTER);
+        linha1.setForeground(Color.black);
         linha1.setFont(new Font("Serif", Font.BOLD, 24));
         linha2 = new JLabel(resizedIcon, JLabel.CENTER);
         setLayout(new GridLayout(3, 1));

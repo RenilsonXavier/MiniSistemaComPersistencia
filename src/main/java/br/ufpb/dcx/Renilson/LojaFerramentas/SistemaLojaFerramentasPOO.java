@@ -13,6 +13,7 @@ public class SistemaLojaFerramentasPOO implements SistemaLojaFerramentas{
         this.ferramentaMap = new HashMap<>();
         this.gravadorDeFerramentas = new GravadorDeFerramentas();
     }
+
     @Override
     public void cadastraFerramenta(String nome, String codigo, int quantidade) throws FerramentaJaExisteException {
         if (this.ferramentaMap.containsKey(codigo)) {
