@@ -26,12 +26,18 @@ public class SistemaLojaFerramentasPOO implements SistemaLojaFerramentas{
 
     @Override
     public Ferramenta pesquisaFerramenta(String codigo) throws FerramentaInexistenteException {
-        if (this.ferramentaMap.containsKey(codigo)){
-            return this.ferramentaMap.get(codigo);
-        } else {
-            throw new FerramentaInexistenteException("Não existe ferramenta com esté código: " + codigo);
-        }
+        return ferramentaMap.values().stream()
+                .filter(ferramenta -> ferramenta.getCodigo().equals(codigo))
+                .findFirst()
+                .orElseThrow(() -> new FerramentaInexistenteException("Não existe ferramenta com este código: " + codigo));
+
     }
+//        if (this.ferramentaMap.containsKey(codigo)) {
+//            return this.ferramentaMap.get(codigo);
+//        } else {
+//            throw new FerramentaInexistenteException("Não existe ferramenta com esté código: " + codigo);
+//        }
+
 
     public void removeFerramenta(String codigo) throws FerramentaInexistenteException {
         if (this.ferramentaMap.containsKey(codigo)){
